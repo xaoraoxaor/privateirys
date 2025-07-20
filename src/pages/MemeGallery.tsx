@@ -2,6 +2,7 @@ import { ArrowLeft, Laugh, Share2, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { getImagePath } from "@/lib/utils";
 
 const MemeGallery = () => {
   const memes = [
@@ -100,15 +101,13 @@ const MemeGallery = () => {
           {memes.map((meme) => (
             <Card key={meme.id} className="mira-card overflow-hidden group">
               <CardContent className="p-0">
-                {/* Meme Image Placeholder */}
+                {/* Meme Image */}
                 <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">😂</div>
-                    <p className="text-lg font-semibold">{meme.title}</p>
-                    {meme.description && (
-                      <p className="text-sm text-muted-foreground mt-2 px-4">{meme.description}</p>
-                    )}
-                  </div>
+                  <img
+                    src={getImagePath(meme.image)}
+                    alt={meme.title}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
                 
                 {/* Meme Info */}

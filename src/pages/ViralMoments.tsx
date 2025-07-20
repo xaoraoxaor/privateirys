@@ -2,6 +2,7 @@ import { ArrowLeft, Eye, Heart, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { getImagePath } from "@/lib/utils";
 
 const ViralMoments = () => {
   const viralTweets = [
@@ -100,7 +101,11 @@ const ViralMoments = () => {
               <CardContent className="p-0">
                 {/* Tweet Image */}
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-6xl opacity-50">🚀</div>
+                  <img
+                    src={getImagePath(tweet.image)}
+                    alt={tweet.type}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
                 
                 {/* Tweet Content */}
@@ -145,35 +150,25 @@ const ViralMoments = () => {
 
         {/* Community Celebrations */}
         <section className="mt-16 mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Community Celebrations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {communityCelebrations.map((celebration) => (
-              <Card key={celebration.id} className="mira-card overflow-hidden">
-                <CardContent className="p-0">
-                  {/* Celebration Image */}
-                  <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-                    <div className="text-6xl opacity-50">🎉</div>
-                  </div>
-                  
-                  {/* Celebration Content */}
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full mb-3">
-                        {celebration.type}
-                      </span>
-                      <h3 className="text-xl font-semibold mb-2">{celebration.title}</h3>
-                      {celebration.creator && (
-                        <p className="text-primary text-sm font-medium mb-2">by {celebration.creator}</p>
-                      )}
-                      <p className="text-muted-foreground">{celebration.description}</p>
-                      {celebration.engagement && (
-                        <p className="text-sm text-green-600 mt-2 font-medium">{celebration.engagement}</p>
-                      )}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <h2 className="text-3xl font-bold text-foreground mb-8">🏆 Community Excellence Awards</h2>
+          <div className="bg-card rounded-xl p-8 shadow-md">
+            <ul className="space-y-4 text-lg">
+              <li><span className="text-2xl mr-2">🏆</span><b>Best Storytelling:</b> <span className="text-primary">@vivalavida61ltc</span> <span className="text-muted-foreground">(Week 3 AI rogue video)</span></li>
+              <li><span className="text-xl mr-2">🏅</span><b>Best Visuals:</b> <span className="text-primary">@vivalavida61ltc</span> <span className="text-muted-foreground">(Week 6 consensus video)</span></li>
+              <li><span className="text-2xl mr-2">🏆</span><b>Most Unique:</b> <span className="text-primary">@Jennychuks7_71</span> <span className="text-muted-foreground">(Week 2 Sherlock mascot)</span></li>
+              <li><span className="text-2xl mr-2">🏆</span><b>Best Idea:</b> <span className="text-primary">@prateekhh</span> <span className="text-muted-foreground">(Week 9 onboarding portal)</span></li>
+              <li><span className="text-xl mr-2">🏅</span><b>Best Writeup:</b> <span className="text-primary">@shayneRFRM</span> <span className="text-muted-foreground">(Week 4 case study)</span></li>
+              <li><span className="text-2xl mr-2">🏆</span><b>Most Insightful:</b> <span className="text-primary">@Paola1371385</span> <span className="text-muted-foreground">(Week 8 journalism)</span></li>
+              <li><span className="text-2xl mr-2">🏆</span><b>Funniest:</b> <span className="text-primary">@Vandyim1</span> <span className="text-muted-foreground">(Week 7 Veri memes)</span></li>
+            </ul>
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-2">Honorable Mentions:</h3>
+              <ul className="list-disc list-inside space-y-1 text-base">
+                <li><span className="text-primary font-medium">@TheAvatarHQ</span> <span className="text-muted-foreground">(AI news report)</span></li>
+                <li><span className="text-primary font-medium">@pulkit126129</span> <span className="text-muted-foreground">(Community contribution)</span></li>
+                <li><span className="text-primary font-medium">@cheff_eth</span> <span className="text-muted-foreground">(Teddy bear explanation)</span></li>
+              </ul>
+            </div>
           </div>
         </section>
 

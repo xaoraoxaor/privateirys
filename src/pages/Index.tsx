@@ -1,51 +1,44 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import miraLogo from "@/assets/mira_logo.png";
-import winnersBackground from "@/assets/winners_bg.jpg";
-import creatorsBackground from "@/assets/creators_bg.jpg";
-import viralBackground from "@/assets/viral_bg.jpg";
-import memesBackground from "@/assets/memes_bg.jpg";
-import timelineBackground from "@/assets/timeline_bg.jpg";
-import statsBackground from "@/assets/stats_bg.jpg";
-import veriMascot from "@/assets/veri_mascot.png";
+import { getImagePath } from "@/lib/utils";
 
 const Index = () => {
   const gridCards = [
     {
       title: "quest winners",
       description: "Champions of each weekly quest",
-      background: winnersBackground,
+      background: "winners_bg.jpg",
       link: "/quest-winners"
     },
     {
       title: "og creators",
       description: "The legends who built our community",
-      background: creatorsBackground,
+      background: "creators_bg.jpg",
       link: "/og-creators"
     },
     {
       title: "viral moments",
       description: "Most epic tweets and celebrations",
-      background: viralBackground,
+      background: "viral_bg.jpg",
       link: "/viral-moments"
     },
     {
       title: "meme gallery",
       description: "Funniest community creations",
-      background: memesBackground,
+      background: "memes_bg.jpg",
       link: "/meme-gallery"
     },
     {
       title: "weekly timeline",
       description: "Complete 10-week journey",
-      background: timelineBackground,
+      background: "timeline_bg.jpg",
       link: "/weekly-timeline"
     },
     {
       title: "community stats",
       description: "Numbers that tell our story",
-      background: statsBackground,
+      background: "stats_bg.jpg",
       link: "/community-stats"
     }
   ];
@@ -56,7 +49,7 @@ const Index = () => {
       <header className="container mx-auto px-4 pt-12 pb-8 text-center">
         <div className="mb-8">
           <img 
-            src={miraLogo} 
+            src={getImagePath('mira_logo.png')} 
             alt="Mira Logo" 
             className="h-16 mx-auto mb-6"
           />
@@ -84,7 +77,7 @@ const Index = () => {
                   {/* Background Image */}
                   <div 
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${card.background})` }}
+                    style={{ backgroundImage: `url(${getImagePath(card.background)})` }}
                   />
                   
                   {/* Gradient Overlay */}
@@ -93,7 +86,7 @@ const Index = () => {
                   {/* Veri Mascot */}
                   <div className="absolute top-4 right-4 w-16 h-16 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
                     <img 
-                      src={veriMascot} 
+                      src={getImagePath('veri_mascot.png')} 
                       alt="Veri Mascot" 
                       className="w-full h-full object-contain"
                     />
