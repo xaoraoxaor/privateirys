@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+				'space-mono': ['Space Mono', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				mira: {
+					teal: 'hsl(var(--mira-teal))',
+					light: 'hsl(var(--mira-light))',
+					accent: 'hsl(var(--mira-accent))',
+					dark: 'hsl(var(--mira-dark))'
 				}
 			},
 			borderRadius: {
