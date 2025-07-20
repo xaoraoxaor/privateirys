@@ -11,42 +11,97 @@ const QuestWinners = () => {
       winner: {
         name: "WEB3KING10",
         twitter: "@WEB3KING10",
-        submission: "Mira Mission Infographic",
+        submission: "Mira Mission Infographic showing AI reliability",
         prize: "$150 USDC",
         pfp: "WEB3KING10_pfp.png"
+      }
+    },
+    {
+      week: 2,
+      title: "Mascot Design",
+      notable: {
+        name: "Miss J",
+        twitter: "@Jennychuks7_71",
+        submission: "Sherlock Holmes inspired Mira robot detective",
+        pfp: "Jennychuks7_71_pfp.png"
+      }
+    },
+    {
+      week: 3,
+      title: "Creative Storytelling",
+      notable: {
+        name: "BTTB Viva",
+        twitter: "@vivalavida61ltc",
+        submission: "AI gone rogue due to hallucinations video",
+        pfp: "vivalavida61ltc_pfp.png"
       }
     },
     {
       week: 4,
       title: "Hallucination Showdown",
       winners: [
-        { place: "1st", name: "Shayne", twitter: "@shayneRFRM", pfp: "shayneRFRM_pfp.png" },
-        { place: "2nd", name: "Prateek Tripathi", twitter: "@prateekhh", pfp: "prateekhh_pfp.png" },
-        { place: "3rd", name: "MNSQ", twitter: "@MNSQu", pfp: "MNSQu_pfp.png" }
+        { place: "1st", name: "Shayne", twitter: "@shayneRFRM", pfp: "shayneRFRM_pfp.png", prize: "$150 USDC" },
+        { place: "2nd", name: "Prateek Tripathi", twitter: "@prateekhh", pfp: "prateekhh_pfp.png", prize: "$100 USDC" },
+        { place: "3rd", name: "MNSQ", twitter: "@MNSQu", pfp: "MNSQu_pfp.png", prize: "$50 USDC" }
       ],
       runnersUp: [
-        "onchaingodson", "greenhandwe", "LamChanThong", "TheAvatarHQ", 
-        "Jennychuks7_71", "vishleshak89", "long43442", "ponzenomic", 
-        "hgkim5055"
+        "onchaingodson", "greenhandwe", "LamChanThong", "vivalavida61ltc", "TheAvatarHQ", 
+        "Jennychuks7_71", "vishleshak89", "long43442", "ponzenomic", "hgkim5055"
       ]
+    },
+    {
+      week: 5,
+      title: "Prove You Right Challenge",
+      notable: {
+        name: "MNSQ",
+        twitter: "@MNSQu",
+        submission: "DID YOU KNOW? MIRA EDITION using proveyouright.vercel.app",
+        pfp: "MNSQu_pfp.png"
+      }
     },
     {
       week: 6,
       title: "Consensus for 5-Year-Olds",
       winners: [
-        { place: "1st", name: "Viva La Vida", twitter: "@vivalavida61ltc", pfp: "vivalavida61ltc_pfp.png" },
-        { place: "2nd", name: "Paola", twitter: "@Paola1371385", pfp: "Paola1371385_pfp.png" },
-        { place: "3rd", name: "Prateek Tripathi", twitter: "@prateekhh", pfp: "prateekhh_pfp.png" }
+        { place: "1st", name: "BTTB Viva", twitter: "@vivalavida61ltc", pfp: "vivalavida61ltc_pfp.png", prize: "$150 USDC" },
+        { place: "2nd", name: "Paola", twitter: "@Paola1371385", pfp: "Paola1371385_pfp.png", prize: "$100 USDC" },
+        { place: "3rd", name: "Prateek Tripathi", twitter: "@prateekhh", pfp: "prateekhh_pfp.png", prize: "$50 USDC" }
+      ],
+      runnersUp: [
+        "Jennychuks", "ritik_pandey999", "kesoonho", "ponzenomic", "CheesyBun0211", 
+        "cerd_x", "Corrina101Young", "tingyan2678", "TheAvatarHQ", "hyeok8911"
       ]
     },
     {
       week: 7,
       title: "Veri Mascot Designs",
       winners: [
-        { place: "1st", name: "zzuuyy8188", twitter: "@zzuuyy8188", pfp: "zzuuyy8188_pfp.png" },
-        { place: "2nd", name: "718crncy", twitter: "@718crncy", pfp: "718crncy_pfp.png" },
-        { place: "3rd", name: "Vandyim1", twitter: "@Vandyim1", pfp: "Vandyim1_pfp.png" }
+        { place: "1st", name: "zzuuyy8188", twitter: "@zzuuyy8188", pfp: "zzuuyy8188_pfp.png", prize: "$150 USDC" },
+        { place: "2nd", name: "718crncy", twitter: "@718crncy", pfp: "718crncy_pfp.png", prize: "$100 USDC" },
+        { place: "3rd", name: "Vandyim1", twitter: "@Vandyim1", pfp: "Vandyim1_pfp.png", prize: "$50 USDC" }
+      ],
+      runnersUp: [
+        "wnektk333", "yourpassword_is", "70nathan_", "wlgns5388", "MJbosexy", 
+        "akhmedovh07", "lisbongg", "NFT99807", "MOONSEO_", "pddprof"
       ]
+    },
+    {
+      week: 8,
+      title: "AI Hallucination Journalism",
+      notables: [
+        { name: "Paola", twitter: "@Paola1371385", submission: "Supergirl investigative journalism video" },
+        { name: "TheAvatarHQ", twitter: "@TheAvatarHQ", submission: "5 true stories AI hallucinations news report" }
+      ]
+    },
+    {
+      week: 9,
+      title: "New Member Onboarding",
+      featured: {
+        name: "Prateek Tripathi",
+        twitter: "@prateekhh",
+        submission: "Ultimate onboarding portal - Mira Realm Gateway",
+        pfp: "prateekhh_pfp.png"
+      }
     }
   ];
 
@@ -101,6 +156,55 @@ const QuestWinners = () => {
                       <span className="text-sm font-semibold text-primary">{week.winner.prize}</span>
                     </div>
                   </div>
+                ) : week.notable ? (
+                  // Notable submission format (Week 2, 3, 5)
+                  <div className="flex items-center space-x-4 p-4 rounded-lg bg-gradient-to-r from-accent/10 to-secondary/10">
+                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-primary">
+                      {week.notable.name.slice(0, 2).toUpperCase()}
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Award className="h-5 w-5 text-primary" />
+                        <h3 className="font-semibold text-lg">{week.notable.name}</h3>
+                        <span className="text-primary text-sm">{week.notable.twitter}</span>
+                      </div>
+                      <p className="text-muted-foreground">{week.notable.submission}</p>
+                    </div>
+                  </div>
+                ) : week.featured ? (
+                  // Featured submission format (Week 9)
+                  <div className="flex items-center space-x-4 p-4 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10">
+                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-primary">
+                      {week.featured.name.slice(0, 2).toUpperCase()}
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Trophy className="h-5 w-5 text-blue-500" />
+                        <h3 className="font-semibold text-lg">{week.featured.name}</h3>
+                        <span className="text-primary text-sm">{week.featured.twitter}</span>
+                      </div>
+                      <p className="text-muted-foreground">{week.featured.submission}</p>
+                    </div>
+                  </div>
+                ) : week.notables ? (
+                  // Multiple notables format (Week 8)
+                  <div className="space-y-3">
+                    {week.notables.map((notable, index) => (
+                      <div key={index} className="flex items-center space-x-4 p-3 rounded-lg bg-muted/50">
+                        <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-sm font-bold text-primary">
+                          {notable.name.slice(0, 2).toUpperCase()}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Award className="h-4 w-4 text-primary" />
+                            <span className="font-semibold">{notable.name}</span>
+                            <span className="text-primary text-sm">{notable.twitter}</span>
+                          </div>
+                          <p className="text-muted-foreground text-sm">{notable.submission}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   // Multiple winners format
                   <div className="space-y-4">
@@ -111,10 +215,15 @@ const QuestWinners = () => {
                             <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-sm font-bold text-primary">
                               {winner.name.slice(0, 2).toUpperCase()}
                             </div>
-                            <div className="flex-1 flex items-center gap-3">
-                              {getPlaceIcon(winner.place)}
-                              <span className="font-semibold">{winner.name}</span>
-                              <span className="text-primary text-sm">{winner.twitter}</span>
+                            <div className="flex-1 flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                {getPlaceIcon(winner.place)}
+                                <span className="font-semibold">{winner.name}</span>
+                                <span className="text-primary text-sm">{winner.twitter}</span>
+                              </div>
+                              {winner.prize && (
+                                <span className="text-sm font-semibold text-green-600">{winner.prize}</span>
+                              )}
                             </div>
                           </div>
                         ))}

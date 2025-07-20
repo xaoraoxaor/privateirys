@@ -7,49 +7,64 @@ const MemeGallery = () => {
   const memes = [
     {
       id: 1,
-      title: "GMIRA Energy",
-      creator: "@crypto_memer",
+      title: "VERI Busy",
+      creator: "@Vandyim1",
       likes: 1247,
-      category: "Daily Grind"
+      category: "Mascot Love",
+      image: "veri_busy_meme.png"
     },
     {
       id: 2,
       title: "Veri Adventures",
-      creator: "@veri_fan",
+      creator: "@crypto_memer",
       likes: 892,
-      category: "Mascot Love"
+      category: "Daily Grind",
+      image: "veri_adventures_meme.png"
     },
     {
       id: 3,
-      title: "Quest Life",
+      title: "GMIRA Energy",
       creator: "@mira_warrior",
       likes: 1456,
-      category: "Campaign Feels"
+      category: "Campaign Feels",
+      image: "gmira_energy_meme.png"
     },
     {
       id: 4,
-      title: "Realm Building",
-      creator: "@web3_builder",
-      likes: 734,
-      category: "Community"
-    },
-    {
-      id: 5,
-      title: "Yapping Legends",
-      creator: "@discord_king",
-      likes: 2103,
-      category: "Community"
-    },
-    {
-      id: 6,
       title: "Consensus Simplified",
       creator: "@blockchain_eli5",
       likes: 967,
-      category: "Educational"
+      category: "Educational",
+      image: "consensus_simple_meme.png"
+    },
+    {
+      id: 5,
+      title: "Teddy Bear Consensus",
+      creator: "@cheff_eth",
+      likes: 834,
+      category: "Educational",
+      image: "teddy_bear_meme.png",
+      description: "Mira is like smart teddy bears checking banana claims"
+    },
+    {
+      id: 6,
+      title: "Quest Life",
+      creator: "@web3_builder",
+      likes: 734,
+      category: "Community",
+      image: "quest_life_meme.png"
+    },
+    {
+      id: 7,
+      title: "Yapping Legends",
+      creator: "@discord_king",
+      likes: 2103,
+      category: "Community",
+      image: "yapping_legends_meme.png"
     }
   ];
 
-  const categories = ["All", "Daily Grind", "Mascot Love", "Campaign Feels", "Community", "Educational"];
+  const categories = ["All", "Mascot Love", "Daily Grind", "Campaign Feels", "Community", "Educational"];
 
   return (
     <div className="min-h-screen bg-background">
@@ -90,6 +105,9 @@ const MemeGallery = () => {
                   <div className="text-center">
                     <div className="text-6xl mb-4">😂</div>
                     <p className="text-lg font-semibold">{meme.title}</p>
+                    {meme.description && (
+                      <p className="text-sm text-muted-foreground mt-2 px-4">{meme.description}</p>
+                    )}
                   </div>
                 </div>
                 
